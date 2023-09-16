@@ -156,12 +156,21 @@
   #endif
 #endif
 
-#if EITHER(ANYCUBIC_LCD_CHIRON, ANYCUBIC_LCD_I3MEGA)
-  #ifndef BEEPER_PIN
-    #define BEEPER_PIN               EXP2_03_PIN  // Chiron Standard Adapter
-  #endif
-  #define SD_DETECT_PIN              EXP2_07_PIN  // Chiron Standard Adapter
-#endif
+// LCD Stuff
+//#define BEEPER_PIN 37
+// Pins for DOGM SPI LCD Support
+//#define DOGLCD_A0  16
+//#define DOGLCD_CS  17
+#define LCD_BACKLIGHT_PIN 33 // backlight LED on A11/D65
+//#define LCD_RESET_PIN  23
+//#define SDSS   53
+
+//#define KILL_PIN -1
+//#define LCD_CONTRAST 200
+//#define BTN_EN1 31
+//#define BTN_EN2 33
+//#define BTN_ENC 35  //the click switch
+//#define SD_DETECT_PIN 49
 
 #if HAS_TMC_UART
   #ifndef X_SERIAL_TX_PIN
